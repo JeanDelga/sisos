@@ -5,13 +5,13 @@
       xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>OS</title>
+        <title>Solicitante</title>
     </h:head>
     <h:body>
         <h:form id="form">
             <p:dataTable id="singleDT" var="os" value="#{osController.listarOSs}" selectionMode="single" selection="#{osController.selectedOS}" rowKey="#{os.id}">
                 <f:facet name="header">
-                    Testando o Teste do Teste Testado
+                    Solicitante
                 </f:facet>
                 <p:column headerText="Id">
                     <h:outputText value="#{os.id}" />

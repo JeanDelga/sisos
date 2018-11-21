@@ -3,30 +3,34 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Sistema de OS</title>
+        <link href="css/Estilo.css" rel="stylesheet" type="text/css" />
     </h:head>
     <h:body>
-        <h3>Login</h3>
-        <br/>
-        
-        <h:form>
-            <h:outputText value="Usuario" />
-            <h:inputText id="username" value="#{loginController.usuario}" />
-            <h:message for="username" />
-            
-            <br/> <br/>
-            
-            <h:outputText value="Senha" />
-            <h:inputSecret id="password" value="#{loginController.senha}" />
-            <h:message for="password" />
-            
-            <br/> <br/>
-            
-            <h:commandButton action="#{loginController.validaLogin}" value="Login"/>
-            <br/>
-            <h:messages/>
-            
-        </h:form>
+        <center>
+            <div id="login" class="arredondado">
+                <div class="acomodar">
+                    <h:form>
+                        <div class="login-page"></div>
+                        <h:outputText value="Usuario" />
+                        <h:inputText id="username" value="#{loginController.usuario}" class="txt arredondado transicao" />
+                        <h:message for="username" />
+
+                        <br/> <br/>
+
+                        <h:outputText value="Senha" />
+                        <h:inputSecret id="password" value="#{loginController.senha}" class="txt arredondado transicao"/>
+                        <h:message for="password" />
+
+                        <br/>
+
+                        <h:commandButton action="#{loginController.validaLogin}" value="Login" class="btnEntrar arredondado transicao"/>
+                        <br/>
+                        <h:messages/>
+                    </h:form>
+                </div>
+            </div>
+        </center>
     </h:body>
 </html>
 

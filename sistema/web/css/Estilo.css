@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding:0px;
+    outline:none;
+    list-style:none;
+}
+body{
+    font: 500 14px Georgia;
+    background-color: #CCC;
+}
+#logo{
+    width: 600px;
+    margin: 1px auto;
+    font: 300 18px Verdana, Geneva, sans-serif;
+    background-color: #FFF;
+    padding: 15px;
+
+}
+#login{
+    width: 400px;
+    margin:1px auto;
+    position:relative;
+    top: 150px;
+    background-color: #FFF;
+    padding: 15px;
+}
+
+#login label{
+    display:block;
+}
+
+#rodape{
+    width: 100%;
+    height: 5px;
+    background-color:#FFF;
+    margin-top: 20%;
+    padding: 15px;
+    color:#FFF;
+    font: 200 14px Verdana, Geneva, sans-serif;
+}
+
+.caixinha{
+    width: 400px;
+    margin:1px auto;
+    position:relative;
+    top: 150px;
+    background-color: #FFF;
+    padding: 15px;
+}
+
+.logo{
+    width:280px;
+    height: 160px;
+    margin:0 auto;
+    padding: 5px;
+}
+
+.acomodar{
+    margin:0 auto;
+    width: 350px;
+}
+
+.txt{
+    border:none;
+    height: 40px;
+    width: 100%;
+    border: thin solid #CCC;
+}
+.txt:focus{
+    border:thin solid #6CF;
+    box-shadow:0 2px 15px #002;
+    -moz-box-shadow:0 2px 15px #002;
+    -webkit-box-shadow:0 2px 15px #002;
+}
+.btnEntrar{
+    width:100%;
+    display:block;
+    height: 40px;
+    font: 300 18px Verdana, Geneva, sans-serif;
+    margin-top: 10px;
+    cursor:pointer;
+    color:#FFF;
+    background: #000;
+}
+.btnEntrar:hover{
+    background: #FFF;
+    color:#FFF;
+}
+
+/* Classes de Herança */
+
+.arredondado{
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.fEsquerda{
+    float:left;
+}
+
+.fDireita{
+    float:right;
+}
+
+.transicao{
+    transition:all 0.5s linear;
+    -webkit-transition:all 0.5s linear;
+    -moz-transition:all 0.5s linear;
+}
+

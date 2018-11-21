@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Cadastro de Usuarios</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputText value="Nome" />
+            <h:inputText value="#{usuariosController.nome}" />
+            
+            <br/> <br/>
+            
+            <h:outputText value="E-Mail" />
+            <h:inputText value="#{usuariosController.email}"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Usuario" />
+            <h:inputText value="#{usuariosController.usuario}"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Senha" />
+            <h:inputSecret value="#{usuariosController.senha}"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Grupo"/>
+            <h:selectOneMenu value="#{usuariosController.idgrupo}" converter="#{gruposConverter}">
+                <f:selectItems value="#{usuariosController.listarGrupos}" var="group" itemValue="#{group}" itemLabel="#{group.grupo}"/>
+            </h:selectOneMenu>
+            
+            <br/> <br/>
+            
+            <h:commandButton action="#{usuariosController.cadastrar}" value="Cadastrar"/>
+            <br/>
+            <h:messages/>
+        </h:form>
+    </h:body>
+</html>
+

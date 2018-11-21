@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Visualizar OS</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputText value="Titulo" />
+            <h:inputText value="#{osController.titulo}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Setor" />
+            <h:inputText value="#{osController.setor}" converter="#{setorConverter}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Solicitação" />
+            <h:inputTextarea value="#{osController.descricao}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Status" />
+            <h:inputText value="#{osController.status}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Correção" />
+            <h:inputTextarea value="#{osController.correcao}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Data Solicitado" />
+            <h:inputText value="#{osController.data_solicitacao}" disabled="true">
+                <f:convertDateTime pattern="dd/MM/yyyy" />
+            </h:inputText>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Hora Solicitado" />
+            <h:inputText value="#{osController.hora_solicitacao}" disabled="true">
+                <f:convertDateTime pattern="HH:mm:ss" />
+            </h:inputText>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Data Inicio Atendimento" />
+            <h:inputText value="#{osController.data_inicio_aten}" disabled="true">
+                <f:convertDateTime pattern="dd/MM/yyyy" />
+            </h:inputText>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Hora Inicio Atendimento" />
+            <h:inputText value="#{osController.hora_inicio_aten}" disabled="true">
+                <f:convertDateTime pattern="HH:mm:ss" />
+            </h:inputText>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Data Fim Atendimento" />
+            <h:inputText value="#{osController.data_fim_aten}" disabled="true">
+                <f:convertDateTime pattern="dd/MM/yyyy" />
+            </h:inputText>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Hora Fim Atendimento" />
+            <h:inputText value="#{osController.hora_fim_aten}" disabled="true">
+                <f:convertDateTime pattern="HH:mm:ss" />
+            </h:inputText>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Usuario Solicitante" />
+            <h:inputText value="#{osController.usuario_soli}" converter="#{userSoliConverter}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:outputText value="Usuario Atendente" />
+            <h:inputText value="#{osController.usuario_aten}" converter="#{userSoliConverter}" disabled="true"/>
+            
+            <br/> <br/>
+            
+            <h:commandButton action="#{osController.buttonVoltar()}" value="Voltar"/>
+            <br/>
+            <h:messages/>
+        </h:form>
+    </h:body>
+</html>
+

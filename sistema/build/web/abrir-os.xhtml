@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>OS</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <p:dataTable id="singleDT" var="os" value="#{osController.listarOSs}" selectionMode="single" selection="#{osController.selectedOS}" rowKey="#{os.id}">
+                <f:facet name="header">
+                    Testando o Teste do Teste Testado
+                </f:facet>
+                <p:column headerText="Id">
+                    <h:outputText value="#{os.id}" />
+                </p:column>
+                <p:column headerText="Descrição">
+                    <h:outputText value="#{os.titulo}" />
+                </p:column>
+                <p:column headerText="Setor">
+                    <h:outputText value="#{os.setor}" converter="#{setorConverter}"/>
+                </p:column>
+                <p:column headerText="Status">
+                    <h:outputText value="#{os.status}" />
+                </p:column>
+                <f:facet name="footer">
+                    <h:button value="Cadastrar OS" outcome="cadastrar-os" />
+                    <h:commandButton action="#{osController.buttonAlterarOs}" value="Alterar"/>
+                    <h:commandButton action="#{osController.buttonVisualizarOs}" value="Visualizar"/>
+                </f:facet>
+            </p:dataTable>
+            <h:link value="Voltar" outcome="admin" />
+        </h:form>
+    </h:body>
+</html>
+
